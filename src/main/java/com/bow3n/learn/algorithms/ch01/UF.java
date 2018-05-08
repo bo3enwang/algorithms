@@ -3,7 +3,7 @@ package com.bow3n.learn.algorithms.ch01;
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 
-import java.util.Objects;
+import java.util.Arrays;
 
 public class UF {
     private int id[];
@@ -51,6 +51,7 @@ public class UF {
     }
 
     public static void main(String[] args) {
+        System.out.println(Arrays.toString(args));
         int N = StdIn.readInt();
         UF uf = new UF(N);
         while (!StdIn.isEmpty()) {
