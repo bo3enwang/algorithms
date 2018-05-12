@@ -2,7 +2,7 @@ package com.bow3n.learn.algorithms.ch02;
 
 public class Insertion {
 
-    public void sort(Comparable[] a) {
+    public static void sort(Comparable[] a) {
         int N = a.length;
         for (int i = 0; i < N; i++) {
             for (int j = i; j > 0 && less(a[j], a[i]); j--) {
