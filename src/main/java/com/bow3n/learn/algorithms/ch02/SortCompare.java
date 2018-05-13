@@ -3,6 +3,8 @@ package com.bow3n.learn.algorithms.ch02;
 import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.Stopwatch;
 
+import java.util.Arrays;
+
 public class SortCompare {
     public static double time(String alg, Double[] a) {
         Stopwatch timer = new Stopwatch();
@@ -12,6 +14,7 @@ public class SortCompare {
         if (alg.equals("Selection")) {
             Selection.sort(a);
         }
+        System.out.println(Arrays.toString(a));
         return timer.elapsedTime();
     }
 
