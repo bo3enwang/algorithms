@@ -14,7 +14,9 @@ public class SortCompare {
         if (alg.equals("Selection")) {
             Selection.sort(a);
         }
-        System.out.println(Arrays.toString(a));
+        if (alg.equals("Shell")) {
+            Shell.sort(a);
+        }
         return timer.elapsedTime();
     }
 
@@ -32,13 +34,15 @@ public class SortCompare {
     }
 
     public static void main(String[] args) {
-        int N = 1000;
+        int N = 5000;
         int T = 100;
 
         double t1 = timeRandomInput("Insertion", N, T);
         double t2 = timeRandomInput("Selection", N, T);
+        double t3 = timeRandomInput("Shell", N, T);
 
-        System.out.println(t1);
-        System.out.println(t2);
+        System.out.println(String.format("Insertion: %s", t1 + ""));
+        System.out.println(String.format("Selection: %s", t2 + ""));
+        System.out.println(String.format("Shell: %s", t3 + ""));
     }
 }
